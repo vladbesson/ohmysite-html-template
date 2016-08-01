@@ -1,0 +1,46 @@
+.page-header {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  &__wrapper {
+    @extend .wrapper;
+  }
+  &__logo {
+    float: left;
+    margin-right: 30px;
+    a {
+      color: $blue;
+      text-decoration: none;
+      font-weight: 900;
+      font-size: 24px;
+      border: none;
+      &:hover {
+        color: $blue;
+      }
+    }
+  }
+  &__menu {
+    float: left;
+    position: relative;
+    top: 4px;
+  }
+  &__lang {
+    float: right;
+    position: relative;
+    top: 4px;
+    li {
+      display: inline-block;
+      padding: 6px 2px;
+      font-size: 14px;
+      border: 1px solid transparent;
+    }
+    a {
+      color: #000;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(153,153,153,0.3);
+      &:hover {
+        color: red;
+        border-bottom: 1px solid rgba(255,0,0,0.3);
+      }
+    }
+  }
+}

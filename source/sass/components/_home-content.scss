@@ -1,0 +1,7 @@
+.home-content {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  &__wrapper {
+    @extend .wrapper;
+  }
+}

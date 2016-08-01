@@ -1,0 +1,58 @@
+.home-slider {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  &__wrapper {
+    @extend .wrapper;
+    position: relative;
+    &:hover {
+      .home-slider__arrow {
+        opacity: 1;
+      }
+    }
+  }
+  &__arrow {
+    display: block;
+    width: 70px;
+    height: 70px;
+    background: rgba(255,0,0,.3);
+    position: absolute;
+    top: 50%;
+    margin-top: -35px;
+    opacity: 0;
+    cursor: pointer;
+    &--left {
+      left: 0;
+      &:before {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 0;
+        height: 0;
+        border-top: 30px solid white;
+        border-right: 30px solid transparent;
+        transform: rotate(-45deg);
+        left: 50%;
+        margin-left: -10px;
+        top: 50%;
+        margin-top: -15px;
+      }
+    }
+    &--right {
+      right: 0;
+      &:before {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 0;
+        height: 0;
+        border-top: 30px solid white;
+        border-right: 30px solid transparent;
+        transform: rotate(135deg);
+        right: 50%;
+        margin-right: -10px;
+        top: 50%;
+        margin-top: -15px;
+      }
+    }
+  }
+}
