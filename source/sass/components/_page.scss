@@ -2,6 +2,10 @@
   padding-top: 70px;
   &__wrapper {
     @extend .wrapper;
+    &--fullwidth {
+      max-width: 960px;
+      margin: 0 auto;
+    }
   }
   &__header {
     margin-bottom: 40px;
@@ -9,5 +13,18 @@
   &__title {
     color: orangered;
     font-weight: 900;
+  }
+  &__content {
+    width: 70%;
+    float: left;
+    padding-right: 30px;
+    &--fullwidth {
+      float: none;
+      width: auto;
+    }
+  }
+  &__sidebar {
+    width: 30%;
+    float: left;
   }
 }
