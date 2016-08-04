@@ -6,3 +6,5 @@ $ gulp
 ```
 
 Wordpress theme comming soon.
+
+![Preview](preview.png)
