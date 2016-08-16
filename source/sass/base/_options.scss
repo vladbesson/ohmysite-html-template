@@ -40,6 +40,7 @@ ol {
 
 .wrapper {
 	width: 95%;
+	max-width: 1600px;
 	margin: 0 auto;
 }
 
@@ -50,7 +51,7 @@ ol {
 
 a {
 	text-decoration: none;
-	color: #04d;
+	color: $blue;
 	border-bottom: 1px solid;
 	border-bottom-color: rgba(0,68,221,.2);
 	&:hover {

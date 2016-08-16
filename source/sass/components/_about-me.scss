@@ -16,4 +16,25 @@
       margin-bottom: 10px;
     }
   }
+  @media (max-width: 1024px) {
+    float: none;
+    width: 100%;
+    padding-right: 0px;
+    margin-bottom: 40px;
+  }
+  @media (max-width: 768px) {
+    &__img {
+      float: none;
+      width: 100%;
+      max-width: 250px;
+      margin-bottom: 10px;
+    }
+    &__text {
+      float: none;
+      width: 100%;
+      padding-left: 00px;
+      font-size: 18px;
+      line-height: 30px;
+    }
+  }
 }

@@ -1,0 +1,14 @@
+.blog-page-item {
+  &__img {
+    margin-bottom: 10px;
+    a {
+      border: none;
+    }
+    img {
+      display: block;
+    }
+  }
+  &__title {
+    margin-bottom: 5px;
+  }
+}

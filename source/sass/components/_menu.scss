@@ -2,7 +2,7 @@
   li {
     display: inline-block;
     padding: 6px 15px;
-    font-size: 14px;
+    font-size: 13px;
     border: 1px solid transparent;
   }
   a {
@@ -12,6 +12,12 @@
     &:hover {
       color: red;
       border-bottom: 1px solid rgba(255,0,0,0.3);
+    }
+  }
+  @media (max-width: 768px) {
+    li {
+      display: block;
+      padding: 6px 0px;
     }
   }
 }
