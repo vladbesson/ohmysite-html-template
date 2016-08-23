@@ -1,0 +1,36 @@
+.widget {
+  margin-bottom: 40px;
+  li {
+    margin-bottom: 12px;
+    font-size: 14px;
+    line-height: 20px;
+    padding-left: 20px;
+    position: relative;
+    &:before {
+      position: absolute;
+      left: 0;
+      top: 4px;
+      font: 14px/1 FontAwesome;
+      color: #ffa900;
+    }
+  }
+  h2 {
+    margin-bottom: 20px;
+  }
+}
+
+.widget_recent_entries {
+  li {
+    &:before {
+      content: "\f1d8";
+    }
+  }
+}
+
+.widget_categories {
+  li {
+    &:before {
+      content: "\f07c";
+    }
+  }
+}

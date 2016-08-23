@@ -22,9 +22,13 @@
       float: none;
       width: auto;
     }
+    p {
+      margin-bottom: 10px;
+    }
   }
   &__sidebar {
     width: 30%;
     float: left;
+    padding-left: 20px;
   }
 }
