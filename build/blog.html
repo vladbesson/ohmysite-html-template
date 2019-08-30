@@ -1,137 +1,160 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>HTML Starter Kit</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,600,700,800' rel='stylesheet' type='text/css'>
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,600,700,800"
+      rel="stylesheet"
+      type="text/css"
+    />
 
-    <link rel="stylesheet" href="css/main.min.css">
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+    <link rel="stylesheet" href="css/main.min.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"
+    />
 
     <script src="https://use.fontawesome.com/e76d8ae019.js"></script>
-
-</head>
-<body>
+  </head>
+  <body>
     <header class="page-header">
-        <div class="page-header__wrapper clearfix">
-            <div class="page-header__logo">
-                <a href="/">OhMySite</a>
-            </div>
-
-            <div class="page-header__nav-toggle">
-                <div id="toggle">
-                    <input type="checkbox">
-                    <span></span>
-                </div>
-            </div>
-
-            <div class="page-header__nav">
-                <div class="page-header__menu">
-                    <div class="menu">
-                        <ul class="menu__list">
-                            <li><a href="/portfolio.html">Portfolio</a></li>
-                            <li><a href="/blog.html">Blog</a></li>
-                            <li><a href="/page.html">Sample page</a></li>
-                            <li><a href="/full-width-page.html">Full width</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="page-header__lang">
-                    <ul>
-                        <li><a href="/">EN</a></li>
-                        <li><a href="/">RU</a></li>
-                    </ul>
-                </div>
-            </div>
+      <div class="page-header__wrapper clearfix">
+        <div class="page-header__logo">
+          <a href="/">OhMySite</a>
         </div>
+
+        <div class="page-header__nav-toggle">
+          <div id="toggle">
+            <input type="checkbox" />
+            <span></span>
+          </div>
+        </div>
+
+        <div class="page-header__nav">
+          <div class="page-header__menu">
+            <div class="menu">
+              <ul class="menu__list">
+                <li><a href="/portfolio.html">Portfolio</a></li>
+                <li><a href="/blog.html">Blog</a></li>
+                <li><a href="/page.html">Sample page</a></li>
+                <li><a href="/full-width-page.html">Full width</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="page-header__lang">
+            <ul>
+              <li><a href="/">EN</a></li>
+              <li><a href="/">RU</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </header>
+  </body>
+</html>
 
 <main>
-    <div class="page blog-page">
-        <div class="page__wrapper clearfix">
-            <div class="page__content">
-                <header class="page__header">
-                    <h1 class="page__title">Blog</h1>
-                </header>
+  <div class="page blog-page">
+    <div class="page__wrapper clearfix">
+      <div class="page__content">
+        <header class="page__header">
+          <h1 class="page__title">Blog</h1>
+        </header>
 
-                <div class="blog-page__list">
-                    <article class="blog-page__item blog-page-item">
-                        <div class="blog-page-item__img">
-                            <a href="post.html">
-                                <img src="img/slide1.jpg" alt="">
-                            </a>
-                        </div>
-                        <div class="blog-page-item__title">
-                            <h2><a href="/post.html">Simple post title</a></h2>
-                        </div>
-                        <div class="blog-page-item__text">
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi assumenda commodi cumque dolorem doloremque dolores doloribus earum eveniet harum hic iste maxime minus natus nihil odit, optio quae quasi quis quisquam suscipit ut vero voluptatibus!
-                            </p>
-                        </div>
-                    </article>
-
-                    <article class="blog-page__item blog-page-item">
-                        <div class="blog-page-item__img">
-                            <a href="post.html">
-                                <img src="img/slide2.jpg" alt="">
-                            </a>
-                        </div>
-                        <div class="blog-page-item__title">
-                            <h2><a href="/post.html">Simple post title 2</a></h2>
-                        </div>
-                        <div class="blog-page-item__text">
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, expedita harum ipsam ipsum nemo placeat quos rerum sint ut. Eum ipsum odit omnis quod sapiente? Amet blanditiis commodi consectetur harum laboriosam omnis quo?
-                            </p>
-                        </div>
-                    </article>
-                </div>
+        <div class="blog-page__list">
+          <article class="blog-page__item blog-page-item">
+            <div class="blog-page-item__img">
+              <a href="post.html">
+                <img src="img/slide1.jpg" alt="" />
+              </a>
             </div>
-
-            <div class="page__sidebar">
-                <section class="widget widget_recent_entries">
-                    <h2>Recent Posts</h2>
-                    <ul>
-                        <li><a href="/post.html">Easy Steps To Better Icon Design</a></li>
-                        <li><a href="/post.html">Design Principles To Evaluate Your Product</a></li>
-                        <li><a href="/post.html">A Little Journey Through (Small And Big) E-Commerce Websites</a></li>
-                        <li><a href="/post.html">Powerful Workflow Tips, Tools And Tricks For Web Designers</a></li>
-                    </ul>
-                </section>
-                
-                <section class="widget widget_categories">
-                    <h2>Categories</h2>
-                    <ul>
-                        <li><a href="/blog.html">Graphic design</a></li>
-                        <li><a href="/blog.html">UX design</a></li>
-                        <li><a href="/blog.html">Traveling</a></li>
-                        <li><a href="/blog.html">Lifehacks</a></li>
-                    </ul>
-                </section>
+            <div class="blog-page-item__title">
+              <h2><a href="/post.html">Simple post title</a></h2>
             </div>
+            <div class="blog-page-item__text">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi
+                assumenda commodi cumque dolorem doloremque dolores doloribus
+                earum eveniet harum hic iste maxime minus natus nihil odit,
+                optio quae quasi quis quisquam suscipit ut vero voluptatibus!
+              </p>
+            </div>
+          </article>
+
+          <article class="blog-page__item blog-page-item">
+            <div class="blog-page-item__img">
+              <a href="post.html">
+                <img src="img/slide2.jpg" alt="" />
+              </a>
+            </div>
+            <div class="blog-page-item__title">
+              <h2><a href="/post.html">Simple post title 2</a></h2>
+            </div>
+            <div class="blog-page-item__text">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est,
+                expedita harum ipsam ipsum nemo placeat quos rerum sint ut. Eum
+                ipsum odit omnis quod sapiente? Amet blanditiis commodi
+                consectetur harum laboriosam omnis quo?
+              </p>
+            </div>
+          </article>
         </div>
+      </div>
+
+      <div class="page__sidebar">
+        <section class="widget widget_recent_entries">
+          <h2>Recent Posts</h2>
+          <ul>
+            <li>
+              <a href="/post.html">Easy Steps To Better Icon Design</a>
+            </li>
+            <li>
+              <a href="/post.html">Design Principles To Evaluate Your Product</a>
+            </li>
+            <li>
+              <a href="/post.html">A Little Journey Through (Small And Big) E-Commerce Websites</a>
+            </li>
+            <li>
+              <a href="/post.html">Powerful Workflow Tips, Tools And Tricks For Web Designers</a>
+            </li>
+          </ul>
+        </section>
+        
+        <section class="widget widget_categories">
+          <h2>Categories</h2>
+          <ul>
+            <li><a href="/blog.html">Graphic design</a></li>
+            <li><a href="/blog.html">UX design</a></li>
+            <li><a href="/blog.html">Traveling</a></li>
+            <li><a href="/blog.html">Lifehacks</a></li>
+          </ul>
+        </section>
+      </div>
     </div>
+  </div>
 </main>
 
-    <footer class="page-footer">
-        <div class="page-footer__wrapper clearfix">
-            <div class="page-footer__left-text">
-                <p>Copyright 2016</p>
-            </div>
+  <footer class="page-footer">
+    <div class="page-footer__wrapper clearfix">
+      <div class="page-footer__left-text">
+        <p>Copyright 2016</p>
+      </div>
 
-            <div class="page-footer__right-text">
-                <p><a href="http://balabanovich.ru">Made with love</a></p>
-            </div>
-        </div>
-    </footer>
+      <div class="page-footer__right-text">
+        <p><a href="http://balabanovich.ru">Made with love</a></p>
+      </div>
+    </div>
+  </footer>
 
-    <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
-    <script src="js/script.min.js"></script>
-    <script src="js/script.js"></script>
+  <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+  <script src="js/script.min.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
