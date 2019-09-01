@@ -1,7 +1,7 @@
 # OhMySite – a new html template
 Run:
 ```
-$ sudo npm install
+$ npm install
 $ npm run start
 ```
 
