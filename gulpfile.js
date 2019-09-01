@@ -49,7 +49,6 @@ gulp.task("images", function() {
 
 gulp.task('js', function () {
     return gulp.src('source/js/*.js')
-        .pipe(gulp.dest('build/js'))
         .pipe(uglify())
         .pipe(rename('script.min.js'))
         .pipe(gulp.dest('build/js'))

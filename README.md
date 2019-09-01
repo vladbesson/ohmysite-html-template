@@ -2,7 +2,7 @@
 Run:
 ```
 $ sudo npm install
-$ gulp
+$ npm run start
 ```
 
 Wordpress theme comming soon.
