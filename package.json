@@ -4,7 +4,6 @@
   "description": "HTML starter kit whith gulp",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "gulp"
   },
   "author": "Vladislav Balabanovich <vladislav.svoi@gmail.com> (http://balabanovich.ru/)",
