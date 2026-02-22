@@ -1,28 +1,19 @@
 {
   "name": "html-starter-kit",
-  "version": "2.0.0",
-  "description": "HTML starter kit whith gulp",
-  "main": "index.js",
+  "version": "3.0.0",
+  "description": "Modern HTML starter kit with Vite and Tailwind CSS",
+  "type": "module",
   "scripts": {
-    "start": "gulp"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "author": "Vladislav Balabanovich <vladislav.svoi@gmail.com> (http://balabanovich.ru/)",
   "license": "MIT",
   "devDependencies": {
-    "autoprefixer": "^6.3.5",
-    "browser-sync": "^2.11.2",
-    "gulp": "^3.9.1",
-    "gulp-combine-media-queries": "^0.2.0",
-    "gulp-combine-mq": "^0.4.0",
-    "gulp-concat": "^2.6.0",
-    "gulp-imagemin": "^2.4.0",
-    "gulp-minify-css": "^1.2.4",
-    "gulp-plumber": "^1.1.0",
-    "gulp-postcss": "^6.1.0",
-    "gulp-rename": "^1.2.2",
-    "gulp-rigger": "^0.5.8",
-    "gulp-sass": "^2.2.0",
-    "gulp-uglify": "^1.5.3",
-    "rimraf": "^2.5.2"
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^4.0.0",
+    "vite": "^6.0.7"
   }
 }
