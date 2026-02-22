@@ -8,48 +8,48 @@
 </head>
 <body class="bg-white text-gray-900">
   <!-- Header -->
-  <header class="bg-white border-b border-gray-200">
-    <div class="container mx-auto px-4 py-4">
-      <div class="flex items-center justify-between">
-        <div class="text-2xl font-bold text-blue-600">
-          <a href="/">OhMySite</a>
+  <header class="py-5">
+    <div class="w-[95%] max-w-[1600px] mx-auto">
+      <div class="flex items-start justify-between">
+        <div class="text-2xl font-black w-[15%]">
+          <a href="/" class="text-black hover:text-blue-600 transition">OhMySite</a>
         </div>
 
         <!-- Mobile menu toggle -->
         <button id="mobile-menu-toggle" class="md:hidden p-2">
-          <span class="block w-6 h-0.5 bg-gray-900 mb-1"></span>
-          <span class="block w-6 h-0.5 bg-gray-900 mb-1"></span>
-          <span class="block w-6 h-0.5 bg-gray-900"></span>
+          <span class="block w-[30px] h-[5px] bg-black mb-[4px]"></span>
+          <span class="block w-[30px] h-[5px] bg-black mb-[4px]"></span>
+          <span class="block w-[30px] h-[5px] bg-black"></span>
         </button>
 
         <!-- Desktop navigation -->
-        <nav class="hidden md:flex items-center gap-8">
+        <nav class="hidden md:flex items-start gap-8 w-[85%]">
           <ul class="flex gap-6">
-            <li><a href="/portfolio.html" class="hover:text-blue-600 transition">Portfolio</a></li>
-            <li><a href="/blog.html" class="hover:text-blue-600 transition">Blog</a></li>
-            <li><a href="/page.html" class="hover:text-blue-600 transition">Sample page</a></li>
-            <li><a href="/full-width-page.html" class="hover:text-blue-600 transition">Full width</a></li>
+            <li><a href="/portfolio.html" class="text-black hover:text-blue-600 transition border-b border-gray-400/30 hover:border-blue-600/30">Portfolio</a></li>
+            <li><a href="/blog.html" class="text-black hover:text-blue-600 transition border-b border-gray-400/30 hover:border-blue-600/30">Blog</a></li>
+            <li><a href="/page.html" class="text-black hover:text-blue-600 transition border-b border-gray-400/30 hover:border-blue-600/30">Sample page</a></li>
+            <li><a href="/full-width-page.html" class="text-black hover:text-blue-600 transition border-b border-gray-400/30 hover:border-blue-600/30">Full width</a></li>
           </ul>
-          <div class="flex gap-2">
-            <a href="/" class="hover:text-blue-600 transition">EN</a>
+          <div class="flex gap-2 text-sm ml-auto">
+            <a href="/" class="text-black hover:text-blue-600 transition border-b border-gray-400/30 hover:border-blue-600/30">EN</a>
             <span>|</span>
-            <a href="/" class="hover:text-blue-600 transition">RU</a>
+            <a href="/" class="text-black hover:text-blue-600 transition border-b border-gray-400/30 hover:border-blue-600/30">RU</a>
           </div>
         </nav>
       </div>
 
       <!-- Mobile navigation -->
-      <nav id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+      <nav id="mobile-menu" class="hidden md:hidden mt-4 pb-4 absolute bg-white w-full left-0 px-[2.5%] z-50">
         <ul class="flex flex-col gap-4">
-          <li><a href="/portfolio.html" class="block hover:text-blue-600 transition">Portfolio</a></li>
-          <li><a href="/blog.html" class="block hover:text-blue-600 transition">Blog</a></li>
-          <li><a href="/page.html" class="block hover:text-blue-600 transition">Sample page</a></li>
-          <li><a href="/full-width-page.html" class="block hover:text-blue-600 transition">Full width</a></li>
+          <li><a href="/portfolio.html" class="block text-black hover:text-blue-600 transition border-b border-gray-400/30 hover:border-blue-600/30">Portfolio</a></li>
+          <li><a href="/blog.html" class="block text-black hover:text-blue-600 transition border-b border-gray-400/30 hover:border-blue-600/30">Blog</a></li>
+          <li><a href="/page.html" class="block text-black hover:text-blue-600 transition border-b border-gray-400/30 hover:border-blue-600/30">Sample page</a></li>
+          <li><a href="/full-width-page.html" class="block text-black hover:text-blue-600 transition border-b border-gray-400/30 hover:border-blue-600/30">Full width</a></li>
         </ul>
-        <div class="flex gap-2 mt-4">
-          <a href="/" class="hover:text-blue-600 transition">EN</a>
+        <div class="flex gap-2 mt-4 text-sm">
+          <a href="/" class="text-black hover:text-blue-600 transition border-b border-gray-400/30 hover:border-blue-600/30">EN</a>
           <span>|</span>
-          <a href="/" class="hover:text-blue-600 transition">RU</a>
+          <a href="/" class="text-black hover:text-blue-600 transition border-b border-gray-400/30 hover:border-blue-600/30">RU</a>
         </div>
       </nav>
     </div>
@@ -57,147 +57,129 @@
 
   <main>
     <!-- Hero Slider -->
-    <section class="relative overflow-hidden">
-      <div id="home-slider" class="flex overflow-x-auto snap-x snap-mandatory scroll-smooth">
-        <div class="min-w-full snap-center">
-          <a href="/">
-            <img src="img/slide2.jpg" alt="Slide 2" class="w-full h-auto" />
-          </a>
-        </div>
-        <div class="min-w-full snap-center">
-          <a href="/">
-            <img src="img/slide1.jpg" alt="Slide 1" class="w-full h-auto" />
-          </a>
+    <section class="py-10 md:py-16">
+      <div class="w-[95%] max-w-[1600px] mx-auto">
+        <div id="home-slider" class="flex overflow-x-auto snap-x snap-mandatory scroll-smooth">
+          <div class="min-w-full snap-center">
+            <a href="/">
+              <img src="img/slide2.jpg" alt="Slide 2" class="w-full h-auto" />
+            </a>
+          </div>
+          <div class="min-w-full snap-center">
+            <a href="/">
+              <img src="img/slide1.jpg" alt="Slide 1" class="w-full h-auto" />
+            </a>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Portfolio Section -->
-    <section class="py-16 bg-gray-50">
-      <div class="container mx-auto px-4">
-        <header class="mb-12 text-center">
-          <h2 class="text-3xl font-bold text-gray-900">My recent works</h2>
+    <section class="py-10 md:py-16 bg-gray-50">
+      <div class="w-[95%] max-w-[1600px] mx-auto">
+        <header class="mb-8">
+          <h2 class="text-2xl md:text-3xl font-bold text-rose-600">My recent works</h2>
         </header>
 
-        <div id="portfolio-slider" class="flex overflow-x-auto gap-6 snap-x snap-mandatory scroll-smooth pb-4">
-          <div class="min-w-[300px] snap-center flex-shrink-0">
-            <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition">
-              <a href="portfolio-item.html">
-                <img src="img/0.jpg" alt="Project" class="w-full h-auto" />
-              </a>
-              <div class="p-4">
-                <a href="portfolio-item.html" class="text-lg font-semibold hover:text-blue-600 transition">Project name</a>
+        <div id="portfolio-slider" class="flex overflow-x-auto gap-5 snap-x snap-mandatory scroll-smooth pb-4">
+          <div class="w-[280px] snap-center flex-shrink-0">
+            <a href="portfolio-item.html" class="block group">
+              <img src="img/0.jpg" alt="Project" class="w-[280px] h-[280px] object-cover" />
+              <div class="py-3">
+                <span class="text-blue-600 group-hover:text-gray-900 transition border-b border-blue-600/20 group-hover:border-orange-600/20">Project name</span>
               </div>
-            </div>
+            </a>
           </div>
-          <div class="min-w-[300px] snap-center flex-shrink-0">
-            <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition">
-              <a href="portfolio-item.html">
-                <img src="img/1.jpg" alt="Project" class="w-full h-auto" />
-              </a>
-              <div class="p-4">
-                <a href="portfolio-item.html" class="text-lg font-semibold hover:text-blue-600 transition">Project name</a>
+          <div class="w-[280px] snap-center flex-shrink-0">
+            <a href="portfolio-item.html" class="block group">
+              <img src="img/1.jpg" alt="Project" class="w-[280px] h-[280px] object-cover" />
+              <div class="py-3">
+                <span class="text-blue-600 group-hover:text-gray-900 transition border-b border-blue-600/20 group-hover:border-orange-600/20">Project name</span>
               </div>
-            </div>
+            </a>
           </div>
-          <div class="min-w-[300px] snap-center flex-shrink-0">
-            <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition">
-              <a href="portfolio-item.html">
-                <img src="img/2.jpg" alt="Project" class="w-full h-auto" />
-              </a>
-              <div class="p-4">
-                <a href="portfolio-item.html" class="text-lg font-semibold hover:text-blue-600 transition">Project name</a>
+          <div class="w-[280px] snap-center flex-shrink-0">
+            <a href="portfolio-item.html" class="block group">
+              <img src="img/2.jpg" alt="Project" class="w-[280px] h-[280px] object-cover" />
+              <div class="py-3">
+                <span class="text-blue-600 group-hover:text-gray-900 transition border-b border-blue-600/20 group-hover:border-orange-600/20">Project name</span>
               </div>
-            </div>
+            </a>
           </div>
-          <div class="min-w-[300px] snap-center flex-shrink-0">
-            <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition">
-              <a href="portfolio-item.html">
-                <img src="img/3.jpg" alt="Project" class="w-full h-auto" />
-              </a>
-              <div class="p-4">
-                <a href="portfolio-item.html" class="text-lg font-semibold hover:text-blue-600 transition">Project name</a>
+          <div class="w-[280px] snap-center flex-shrink-0">
+            <a href="portfolio-item.html" class="block group">
+              <img src="img/3.jpg" alt="Project" class="w-[280px] h-[280px] object-cover" />
+              <div class="py-3">
+                <span class="text-blue-600 group-hover:text-gray-900 transition border-b border-blue-600/20 group-hover:border-orange-600/20">Project name</span>
               </div>
-            </div>
+            </a>
           </div>
-          <div class="min-w-[300px] snap-center flex-shrink-0">
-            <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition">
-              <a href="portfolio-item.html">
-                <img src="img/4.jpg" alt="Project" class="w-full h-auto" />
-              </a>
-              <div class="p-4">
-                <a href="portfolio-item.html" class="text-lg font-semibold hover:text-blue-600 transition">Project name</a>
+          <div class="w-[280px] snap-center flex-shrink-0">
+            <a href="portfolio-item.html" class="block group">
+              <img src="img/4.jpg" alt="Project" class="w-[280px] h-[280px] object-cover" />
+              <div class="py-3">
+                <span class="text-blue-600 group-hover:text-gray-900 transition border-b border-blue-600/20 group-hover:border-orange-600/20">Project name</span>
               </div>
-            </div>
+            </a>
           </div>
-          <div class="min-w-[300px] snap-center flex-shrink-0">
-            <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition">
-              <a href="portfolio-item.html">
-                <img src="img/5.jpg" alt="Project" class="w-full h-auto" />
-              </a>
-              <div class="p-4">
-                <a href="portfolio-item.html" class="text-lg font-semibold hover:text-blue-600 transition">Project name</a>
+          <div class="w-[280px] snap-center flex-shrink-0">
+            <a href="portfolio-item.html" class="block group">
+              <img src="img/5.jpg" alt="Project" class="w-[280px] h-[280px] object-cover" />
+              <div class="py-3">
+                <span class="text-blue-600 group-hover:text-gray-900 transition border-b border-blue-600/20 group-hover:border-orange-600/20">Project name</span>
               </div>
-            </div>
+            </a>
           </div>
-          <div class="min-w-[300px] snap-center flex-shrink-0">
-            <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition">
-              <a href="portfolio-item.html">
-                <img src="img/6.jpg" alt="Project" class="w-full h-auto" />
-              </a>
-              <div class="p-4">
-                <a href="portfolio-item.html" class="text-lg font-semibold hover:text-blue-600 transition">Project name</a>
+          <div class="w-[280px] snap-center flex-shrink-0">
+            <a href="portfolio-item.html" class="block group">
+              <img src="img/6.jpg" alt="Project" class="w-[280px] h-[280px] object-cover" />
+              <div class="py-3">
+                <span class="text-blue-600 group-hover:text-gray-900 transition border-b border-blue-600/20 group-hover:border-orange-600/20">Project name</span>
               </div>
-            </div>
+            </a>
           </div>
-          <div class="min-w-[300px] snap-center flex-shrink-0">
-            <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition">
-              <a href="portfolio-item.html">
-                <img src="img/7.jpg" alt="Project" class="w-full h-auto" />
-              </a>
-              <div class="p-4">
-                <a href="portfolio-item.html" class="text-lg font-semibold hover:text-blue-600 transition">Project name</a>
+          <div class="w-[280px] snap-center flex-shrink-0">
+            <a href="portfolio-item.html" class="block group">
+              <img src="img/7.jpg" alt="Project" class="w-[280px] h-[280px] object-cover" />
+              <div class="py-3">
+                <span class="text-blue-600 group-hover:text-gray-900 transition border-b border-blue-600/20 group-hover:border-orange-600/20">Project name</span>
               </div>
-            </div>
+            </a>
           </div>
-          <div class="min-w-[300px] snap-center flex-shrink-0">
-            <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition">
-              <a href="portfolio-item.html">
-                <img src="img/8.jpg" alt="Project" class="w-full h-auto" />
-              </a>
-              <div class="p-4">
-                <a href="portfolio-item.html" class="text-lg font-semibold hover:text-blue-600 transition">Project name</a>
+          <div class="w-[280px] snap-center flex-shrink-0">
+            <a href="portfolio-item.html" class="block group">
+              <img src="img/8.jpg" alt="Project" class="w-[280px] h-[280px] object-cover" />
+              <div class="py-3">
+                <span class="text-blue-600 group-hover:text-gray-900 transition border-b border-blue-600/20 group-hover:border-orange-600/20">Project name</span>
               </div>
-            </div>
+            </a>
           </div>
-          <div class="min-w-[300px] snap-center flex-shrink-0">
-            <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition">
-              <a href="portfolio-item.html">
-                <img src="img/9.jpg" alt="Project" class="w-full h-auto" />
-              </a>
-              <div class="p-4">
-                <a href="portfolio-item.html" class="text-lg font-semibold hover:text-blue-600 transition">Project name</a>
+          <div class="w-[280px] snap-center flex-shrink-0">
+            <a href="portfolio-item.html" class="block group">
+              <img src="img/9.jpg" alt="Project" class="w-[280px] h-[280px] object-cover" />
+              <div class="py-3">
+                <span class="text-blue-600 group-hover:text-gray-900 transition border-b border-blue-600/20 group-hover:border-orange-600/20">Project name</span>
               </div>
-            </div>
+            </a>
           </div>
         </div>
       </div>
     </section>
 
     <!-- About & Blog Section -->
-    <section class="py-16">
-      <div class="container mx-auto px-4">
-        <div class="grid md:grid-cols-2 gap-12">
+    <section class="py-10 md:py-16">
+      <div class="w-[95%] max-w-[1600px] mx-auto">
+        <div class="grid md:grid-cols-2 gap-8 md:gap-12">
           <!-- About Me -->
           <div>
-            <header class="mb-6">
-              <h2 class="text-3xl font-bold text-gray-900">About me</h2>
+            <header class="mb-5">
+              <h2 class="text-2xl md:text-3xl font-bold text-rose-600">About me</h2>
             </header>
-            <div class="flex flex-col md:flex-row gap-6">
-              <div class="flex-shrink-0">
-                <img src="img/avatar.jpg" alt="Avatar" class="w-32 h-32 rounded-full object-cover" />
+            <div class="flex flex-col sm:flex-row gap-5">
+              <div class="flex-shrink-0 w-full sm:w-1/3">
+                <img src="img/avatar.jpg" alt="Avatar" class="w-full max-w-[250px] sm:max-w-none" />
               </div>
-              <div class="space-y-4 text-gray-700">
+              <div class="space-y-2.5 text-gray-900 text-lg leading-[30px] sm:w-2/3">
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, quae.</p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad alias aliquid aut beatae blanditiis corporis distinctio dolore eligendi, facere ipsum laborum magni nisi odit porro praesentium qui reiciendis repellat sit!</p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid expedita fuga impedit molestiae natus perspiciatis praesentium suscipit veritatis vitae, voluptate.</p>
@@ -207,24 +189,24 @@
 
           <!-- Recent Blog Posts -->
           <div>
-            <header class="mb-6">
-              <h2 class="text-3xl font-bold text-gray-900">Recent blog posts</h2>
+            <header class="mb-5">
+              <h2 class="text-2xl md:text-3xl font-bold text-rose-600">Recent blog posts</h2>
             </header>
             <ul class="space-y-3">
               <li>
-                <a href="/post.html" class="text-blue-600 hover:text-blue-800 transition">A Deep Dive Into Axure 8: A Comprehensive Review</a>
+                <a href="/post.html" class="text-blue-600 hover:text-gray-900 transition border-b border-blue-600/20 hover:border-orange-600/20">A Deep Dive Into Axure 8: A Comprehensive Review</a>
               </li>
               <li>
-                <a href="/post.html" class="text-blue-600 hover:text-blue-800 transition">Easy Steps To Better Icon Design</a>
+                <a href="/post.html" class="text-blue-600 hover:text-gray-900 transition border-b border-blue-600/20 hover:border-orange-600/20">Easy Steps To Better Icon Design</a>
               </li>
               <li>
-                <a href="/post.html" class="text-blue-600 hover:text-blue-800 transition">Design Principles To Evaluate Your Product</a>
+                <a href="/post.html" class="text-blue-600 hover:text-gray-900 transition border-b border-blue-600/20 hover:border-orange-600/20">Design Principles To Evaluate Your Product</a>
               </li>
               <li>
-                <a href="/post.html" class="text-blue-600 hover:text-blue-800 transition">A Little Journey Through (Small And Big) E-Commerce Websites</a>
+                <a href="/post.html" class="text-blue-600 hover:text-gray-900 transition border-b border-blue-600/20 hover:border-orange-600/20">A Little Journey Through (Small And Big) E-Commerce Websites</a>
               </li>
               <li>
-                <a href="/post.html" class="text-blue-600 hover:text-blue-800 transition">Powerful Workflow Tips, Tools And Tricks For Web Designers</a>
+                <a href="/post.html" class="text-blue-600 hover:text-gray-900 transition border-b border-blue-600/20 hover:border-orange-600/20">Powerful Workflow Tips, Tools And Tricks For Web Designers</a>
               </li>
             </ul>
           </div>
@@ -235,11 +217,11 @@
 
   <!-- Footer -->
   <footer class="bg-gray-900 text-white py-8">
-    <div class="container mx-auto px-4">
-      <div class="flex flex-col md:flex-row justify-between items-center">
+    <div class="w-[95%] max-w-[1600px] mx-auto">
+      <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
         <p>Copyright 2026</p>
         <p>
-          <a href="http://balabanovich.ru" class="hover:text-blue-400 transition">Made with love</a>
+          <a href="http://balabanovich.ru" class="text-white hover:text-blue-400 transition border-b border-white/20 hover:border-blue-400/20">Made with love</a>
         </p>
       </div>
     </div>

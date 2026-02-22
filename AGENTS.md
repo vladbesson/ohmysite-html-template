@@ -4,203 +4,211 @@ Guidelines for agentic coding agents operating in this repository.
 
 ## Project Overview
 
-This is an HTML starter kit template using Gulp for building static websites. It includes SASS preprocessing, HTML partials via rigger, image optimization, and live reloading.
+**OhMySite** — HTML starter kit / шаблон для статических сайтов-портфолио. Построен на Vite + Tailwind CSS v4. Многостраничный сайт без фреймворков, без шаблонизатора — header, footer и sidebar дублируются в каждом HTML-файле.
 
 ## Build Commands
 
 ```bash
-# Install dependencies
-npm install
-
-# Start development server with live reload (builds + watches + serves)
-npm start
-
-# Alternative: just run gulp directly
-gulp
-
-# Build for production (without serve)
-gulp build
-
-# Clean build directory
-gulp clean
-
-# Individual tasks
-gulp style    # Compile SASS to CSS
-gulp html     # Process HTML with rigger
-gulp js       # Minify JavaScript
-gulp images   # Optimize images
+npm install          # Установить зависимости
+npm run dev          # Dev-сервер с HMR (автооткрытие браузера)
+npm run build        # Production-сборка → dist/
+npm run preview      # Локальный просмотр production-сборки
 ```
 
-Note: There are no lint or test commands configured. This is a simple static site build.
+Линтеров и тестов нет. Это статический шаблон.
+
+## Tech Stack
+
+- **Vite 6.x** — сборщик и dev-сервер
+- **Tailwind CSS 4.x** — utility-first CSS
+- **@tailwindcss/vite** — Vite-плагин для Tailwind v4 (обязателен, без него классы не работают)
+- **Vanilla JS** — никаких фреймворков
 
 ## Project Structure
 
 ```
-source/
-├── sass/
-│   ├── main.scss           # Entry point - imports all partials
-│   ├── utils/              # Mixins and utilities
-│   │   ├── _utils.scss     # Imports my-mixins and css3-mixins
-│   │   ├── _my-mixins.scss # Custom mixins
-│   │   └── _css3-mixins.scss
-│   ├── vendors/            # Third-party styles (normalize, etc.)
-│   ├── base/
-│   │   ├── _base.scss      # Imports colors and options
-│   │   ├── _colors.scss    # Color variables ($blue, etc.)
-│   │   └── _options.scss   # Base element styles
-│   └── components/         # Component-specific styles
-│       ├── _components.scss # Imports all component partials
-│       └── _*.scss         # Individual component files
+src/
+├── styles/
+│   └── main.css              # Точка входа CSS: @import "tailwindcss"
 ├── js/
-│   └── script.js           # Main JavaScript file
-├── img/                    # Source images (png, jpg, gif, svg)
-├── parts/
-│   ├── header.html         # Header partial
-│   ├── footer.html         # Footer partial
-│   └── sidebar.html        # Sidebar partial
-└── *.html                  # Page templates
+│   └── script.js             # Vanilla JS (мобильное меню)
+├── img/                      # Изображения (jpg, png)
+├── index.html                # Главная
+├── blog.html                 # Список постов блога (с сайдбаром)
+├── post.html                 # Отдельный пост (с сайдбаром)
+├── portfolio.html            # Сетка портфолио
+├── portfolio-item.html       # Отдельный проект портфолио
+├── page.html                 # Обычная страница (с сайдбаром)
+├── full-width-page.html      # Полноширинная страница
+└── 404.html                  # Страница ошибки
 
-build/                      # Compiled output (gitignored)
-├── css/main.min.css
-├── js/script.min.js
-├── img/
-└── *.html
+vite.config.js                # Конфиг Vite + Tailwind-плагин
+package.json
+dist/                         # Результат сборки (gitignored)
 ```
 
-## Code Style Guidelines
+## Vite Configuration
 
-### HTML
+- `root: 'src'` — исходники в папке src
+- `build.outDir: '../dist'` — сборка в корневой dist/
+- Все HTML-страницы перечислены как entry points в `rollupOptions.input`
+- При добавлении новой страницы — **обязательно добавить её в `rollupOptions.input`**
 
-- Use HTML5 doctype
-- Include viewport meta tag
-- Use rigger syntax for partials: `//= parts/filename.html`
-- Place partial includes at the start/end of files (header/footer pattern)
-- Use double quotes for attributes
-- Use lowercase for tags and attributes
+## Page Layouts
+
+### Общая структура каждой страницы
 
 ```html
-//= parts/header.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page Title</title>
+  <link rel="stylesheet" href="/styles/main.css" />
+</head>
+<body class="bg-white text-gray-900">
+  <header class="py-5">...</header>
+  <main>...</main>
+  <footer class="bg-gray-900 text-white py-8">...</footer>
+  <script type="module" src="/js/script.js"></script>
+</body>
+</html>
+```
 
-<main>
-  <div class="component">
-    <div class="component__element">Content</div>
+Header и footer **копируются** в каждую страницу. Системы partials нет. При изменении навигации или футера — менять во **всех 8 файлах**.
+
+### Типы макетов
+
+| Страница | Макет | Особенности |
+|---|---|---|
+| `index.html` | Full width | Слайдер, портфолио-карусель, about, блог |
+| `portfolio.html` | Full width | Адаптивная сетка 1→2→3→4 колонки |
+| `portfolio-item.html` | Full width | Две колонки: текст + изображение |
+| `blog.html` | Main + sidebar | `grid-cols-[1fr_300px]`, сайдбар 300px |
+| `post.html` | Main + sidebar | Такой же grid, как blog |
+| `page.html` | Main + sidebar | Такой же grid, как blog |
+| `full-width-page.html` | Full width | Контент без сайдбара |
+| `404.html` | Centered | Большой "404" по центру |
+
+## CSS: Tailwind v4
+
+### Точка входа
+
+```css
+/* src/styles/main.css */
+@import "tailwindcss";
+@source "../**/*.html";
+```
+
+Кастомного CSS нет — всё через utility-классы Tailwind.
+
+### Цветовая палитра
+
+| Роль | Классы |
+|---|---|
+| Текст основной | `text-gray-900`, `text-black` |
+| Заголовки секций | `text-rose-600` |
+| Ссылки | `text-blue-600` |
+| Ссылки hover | `hover:text-gray-900` или `hover:text-blue-600` |
+| Фон страницы | `bg-white` |
+| Фон секций | `bg-gray-50` (чередование) |
+| Футер | `bg-gray-900 text-white` |
+
+### Ключевые паттерны
+
+**Контейнер** (вместо стандартного `container`):
+```html
+<div class="w-[95%] max-w-[1600px] mx-auto">
+```
+
+**Отступы секций**:
+```html
+<section class="py-10 md:py-16">
+```
+
+**Ссылки в контенте** (единый паттерн):
+```html
+<a class="text-blue-600 hover:text-gray-900 transition border-b border-blue-600/20 hover:border-orange-600/20">
+```
+
+**Ссылки в навигации**:
+```html
+<a class="text-black hover:text-blue-600 transition border-b border-gray-400/30 hover:border-blue-600/30">
+```
+
+**Портфолио-карточка с group hover**:
+```html
+<a href="portfolio-item.html" class="block group">
+  <img src="img/0.jpg" alt="Project" class="w-full h-auto" />
+  <div>
+    <span class="text-blue-600 group-hover:text-gray-900 transition border-b border-blue-600/20 group-hover:border-orange-600/20">Project name</span>
   </div>
-</main>
-
-//= parts/footer.html
+</a>
 ```
 
-### SASS/SCSS
-
-- Entry point (`main.scss`) only contains imports
-- Use underscore prefix for partial files: `_component-name.scss`
-- Use 2-space indentation
-- Follow 7-1 pattern: utils, vendors, base, components directories
-- Nest selectors to reflect HTML structure, but limit depth
-
-#### BEM Naming Convention
-
-Use Block__Element--Modifier pattern:
-
-```scss
-.block { }
-.block__element { }
-.block__element--modifier { }
-.block--modifier { }
+**Сетка портфолио** (адаптивная):
+```html
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
 ```
 
-#### Nesting
-
-```scss
-.component {
-  property: value;
-
-  &__element {
-    property: value;
-
-    &:hover { }
-  }
-
-  @media (max-width: 768px) {
-    property: mobile-value;
-  }
-}
+**Макет с сайдбаром**:
+```html
+<div class="grid md:grid-cols-[1fr_300px] gap-8 md:gap-12">
+  <div><!-- Main --></div>
+  <aside class="space-y-8"><!-- Sidebar --></aside>
+</div>
 ```
 
-#### Variables
-
-- Define color variables in `base/_colors.scss`
-- Use descriptive names: `$blue`, `$primary-color`
-- Reference variables throughout: `color: $blue;`
-
-#### Mixins
-
-- Define reusable mixins in `utils/_my-mixins.scss`
-- Accept parameters for flexibility
-
-```scss
-@mixin link($color, $hover-color, $border-color, $border-hover) {
-  color: $color;
-  &:hover {
-    color: $hover-color;
-  }
-}
+**Слайдер/карусель на CSS scroll-snap**:
+```html
+<div class="flex overflow-x-auto snap-x snap-mandatory scroll-smooth">
+  <div class="min-w-full snap-center">...</div>
+</div>
 ```
 
-#### Media Queries
+### Responsive
 
-- Nest media queries inside selectors (not at file end)
-- Use max-width breakpoints
-- Common breakpoint: 768px for mobile
+Mobile-first подход. Используемые брейкпоинты:
+- `sm:` (640px) — мелкие адаптации
+- `md:` (768px) — **основной**, переключение mobile → desktop
+- `lg:` (1024px) — сетки
+- `xl:` (1280px) — 4-колоночные сетки
 
-### JavaScript
+## JavaScript
 
-- Uses jQuery (loaded via CDN in header partial)
-- Wrap code in `$(document).ready(function() { })`
-- Use camelCase for variable names
-- Keep JavaScript minimal; this is primarily a CSS/HTML project
+Единственный JS-файл — `src/js/script.js`. Содержит только тогл мобильного меню через переключение класса `hidden`:
 
 ```javascript
-$(document).ready(function() {
-  $(".selector").on("click", function() {
-    // Handler
-  });
-});
+const toggle = document.getElementById('mobile-menu-toggle');
+const menu = document.getElementById('mobile-menu');
+if (toggle && menu) {
+  toggle.addEventListener('click', () => menu.classList.toggle('hidden'));
+}
 ```
 
-### CSS/SASS Conventions
+## Code Conventions
 
-- Use `@extend .wrapper` for layout wrappers
-- Use `.clearfix` for float containers
-- Set `box-sizing: border-box` globally
-- Reset margins/padding on headings and lists
-- Use `max-width: 100%` for responsive images
+### HTML
+- HTML5, семантические теги (`header`, `nav`, `main`, `aside`, `article`, `footer`)
+- Двойные кавычки для атрибутов
+- `type="module"` для скриптов
+- Самозакрывающиеся теги: `<meta ... />`, `<img ... />`
 
-### File Naming
+### CSS / Tailwind
+- Utility-first — никаких кастомных CSS-классов
+- Произвольные значения через квадратные скобки: `w-[95%]`, `max-w-[1600px]`, `h-[280px]`
+- Opacity через слэш: `border-blue-600/20`, `border-gray-400/30`
+- Все переходы через `transition`
 
-- SASS partials: `_kebab-case.scss`
-- HTML files: `kebab-case.html`
-- JavaScript: `kebab-case.js`
+### Именование файлов
+- HTML: `kebab-case.html`
+- JS: `kebab-case.js`
+- CSS: `kebab-case.css`
 
-### Imports Order
+## Important Notes
 
-In `main.scss`:
-1. Utils (mixins)
-2. Vendors (third-party)
-3. Base (variables, resets)
-4. Components (UI elements)
-
-## Dependencies
-
-- Gulp 3.x task runner
-- gulp-sass for SASS compilation
-- gulp-rigger for HTML partials
-- gulp-autoprefixer for vendor prefixes
-- browser-sync for live reload
-
-## Notes
-
-- Output CSS is minified with `.min.css` suffix
-- Output JS is minified with `.min.js` suffix
-- Images are optimized but not renamed
-- Build output goes to `build/` directory
+- **Нет системы шаблонов** — header/footer дублируется в каждом файле. Изменения навигации требуют правки всех 8 HTML-файлов
+- **Нет PostCSS-конфига и tailwind.config.js** — Tailwind v4 работает через Vite-плагин, конфигурация не нужна
+- **Новые страницы** нужно добавлять в `vite.config.js → rollupOptions.input`
+- **Изображения** лежат в `src/img/`, Vite копирует их в dist при сборке
