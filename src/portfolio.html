@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="/styles/main.css" />
+</head>
+<body class="bg-white text-gray-900">
+  <!-- Header -->
+  <header class="py-5">
+    <div class="w-[95%] max-w-[1600px] mx-auto">
+      <div class="flex items-start justify-between">
+        <div class="text-2xl font-black w-[15%]">
+          <a href="/" class="text-black hover:text-blue-600 transition">OhMySite</a>
+        </div>
+
+        <!-- Mobile menu toggle -->
+        <button id="mobile-menu-toggle" class="md:hidden p-2">
+          <span class="block w-[30px] h-[5px] bg-black mb-[4px]"></span>
+          <span class="block w-[30px] h-[5px] bg-black mb-[4px]"></span>
+          <span class="block w-[30px] h-[5px] bg-black"></span>
+        </button>
+
+        <!-- Desktop navigation -->
+        <nav class="hidden md:flex items-start gap-8 w-[85%]">
+          <ul class="flex gap-6">
+            <li><a href="/portfolio.html" class="text-black hover:text-blue-600 transition border-b border-gray-400/30 hover:border-blue-600/30">Portfolio</a></li>
+            <li><a href="/blog.html" class="text-black hover:text-blue-600 transition border-b border-gray-400/30 hover:border-blue-600/30">Blog</a></li>
+            <li><a href="/page.html" class="text-black hover:text-blue-600 transition border-b border-gray-400/30 hover:border-blue-600/30">Sample page</a></li>
+            <li><a href="/full-width-page.html" class="text-black hover:text-blue-600 transition border-b border-gray-400/30 hover:border-blue-600/30">Full width</a></li>
+          </ul>
+          <div class="flex gap-2 text-sm ml-auto">
+            <a href="/" class="text-black hover:text-blue-600 transition border-b border-gray-400/30 hover:border-blue-600/30">EN</a>
+            <span>|</span>
+            <a href="/" class="text-black hover:text-blue-600 transition border-b border-gray-400/30 hover:border-blue-600/30">RU</a>
+          </div>
+        </nav>
+      </div>
+
+      <!-- Mobile navigation -->
+      <nav id="mobile-menu" class="hidden md:hidden mt-4 pb-4 absolute bg-white w-full left-0 px-[2.5%] z-50">
+        <ul class="flex flex-col gap-4">
+          <li><a href="/portfolio.html" class="block text-black hover:text-blue-600 transition border-b border-gray-400/30 hover:border-blue-600/30">Portfolio</a></li>
+          <li><a href="/blog.html" class="block text-black hover:text-blue-600 transition border-b border-gray-400/30 hover:border-blue-600/30">Blog</a></li>
+          <li><a href="/page.html" class="block text-black hover:text-blue-600 transition border-b border-gray-400/30 hover:border-blue-600/30">Sample page</a></li>
+          <li><a href="/full-width-page.html" class="block text-black hover:text-blue-600 transition border-b border-gray-400/30 hover:border-blue-600/30">Full width</a></li>
+        </ul>
+        <div class="flex gap-2 mt-4 text-sm">
+          <a href="/" class="text-black hover:text-blue-600 transition border-b border-gray-400/30 hover:border-blue-600/30">EN</a>
+          <span>|</span>
+          <a href="/" class="text-black hover:text-blue-600 transition border-b border-gray-400/30 hover:border-blue-600/30">RU</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="py-10 md:py-16">
+      <div class="w-[95%] max-w-[1600px] mx-auto">
+        <header class="mb-8">
+          <h1 class="text-3xl md:text-4xl font-bold text-gray-900">Portfolio</h1>
+        </header>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+          <a href="portfolio-item.html" class="block group">
+            <div class="mb-3">
+              <img src="img/0.jpg" alt="Project" class="w-full h-auto" />
+            </div>
+            <div>
+              <span class="text-blue-600 group-hover:text-gray-900 transition border-b border-blue-600/20 group-hover:border-orange-600/20">Project name</span>
+            </div>
+          </a>
+
+          <a href="portfolio-item.html" class="block group">
+            <div class="mb-3">
+              <img src="img/1.jpg" alt="Project" class="w-full h-auto" />
+            </div>
+            <div>
+              <span class="text-blue-600 group-hover:text-gray-900 transition border-b border-blue-600/20 group-hover:border-orange-600/20">Project name</span>
+            </div>
+          </a>
+
+          <a href="portfolio-item.html" class="block group">
+            <div class="mb-3">
+              <img src="img/2.jpg" alt="Project" class="w-full h-auto" />
+            </div>
+            <div>
+              <span class="text-blue-600 group-hover:text-gray-900 transition border-b border-blue-600/20 group-hover:border-orange-600/20">Project name</span>
+            </div>
+          </a>
+
+          <a href="portfolio-item.html" class="block group">
+            <div class="mb-3">
+              <img src="img/4.jpg" alt="Project" class="w-full h-auto" />
+            </div>
+            <div>
+              <span class="text-blue-600 group-hover:text-gray-900 transition border-b border-blue-600/20 group-hover:border-orange-600/20">Project name</span>
+            </div>
+          </a>
+
+          <a href="portfolio-item.html" class="block group">
+            <div class="mb-3">
+              <img src="img/5.jpg" alt="Project" class="w-full h-auto" />
+            </div>
+            <div>
+              <span class="text-blue-600 group-hover:text-gray-900 transition border-b border-blue-600/20 group-hover:border-orange-600/20">Project name</span>
+            </div>
+          </a>
+
+          <a href="portfolio-item.html" class="block group">
+            <div class="mb-3">
+              <img src="img/6.jpg" alt="Project" class="w-full h-auto" />
+            </div>
+            <div>
+              <span class="text-blue-600 group-hover:text-gray-900 transition border-b border-blue-600/20 group-hover:border-orange-600/20">Project name</span>
+            </div>
+          </a>
+
+          <a href="portfolio-item.html" class="block group">
+            <div class="mb-3">
+              <img src="img/7.jpg" alt="Project" class="w-full h-auto" />
+            </div>
+            <div>
+              <span class="text-blue-600 group-hover:text-gray-900 transition border-b border-blue-600/20 group-hover:border-orange-600/20">Project name</span>
+            </div>
+          </a>
+
+          <a href="portfolio-item.html" class="block group">
+            <div class="mb-3">
+              <img src="img/8.jpg" alt="Project" class="w-full h-auto" />
+            </div>
+            <div>
+              <span class="text-blue-600 group-hover:text-gray-900 transition border-b border-blue-600/20 group-hover:border-orange-600/20">Project name</span>
+            </div>
+          </a>
+
+          <a href="portfolio-item.html" class="block group">
+            <div class="mb-3">
+              <img src="img/9.jpg" alt="Project" class="w-full h-auto" />
+            </div>
+            <div>
+              <span class="text-blue-600 group-hover:text-gray-900 transition border-b border-blue-600/20 group-hover:border-orange-600/20">Project name</span>
+            </div>
+          </a>
+
+          <a href="portfolio-item.html" class="block group">
+            <div class="mb-3">
+              <img src="img/3.jpg" alt="Project" class="w-full h-auto" />
+            </div>
+            <div>
+              <span class="text-blue-600 group-hover:text-gray-900 transition border-b border-blue-600/20 group-hover:border-orange-600/20">Project name</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-8">
+    <div class="w-[95%] max-w-[1600px] mx-auto">
+      <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
+        <p>Copyright 2026</p>
+        <p>
+          <a href="http://balabanovich.ru" class="text-white hover:text-blue-400 transition border-b border-white/20 hover:border-blue-400/20">Made with love</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/js/script.js"></script>
+</body>
+</html>
