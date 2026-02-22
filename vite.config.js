@@ -4,7 +4,7 @@ import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
   plugins: [tailwindcss()],
-  base: '/ohmysite-html-template/',
+  base: process.env.NODE_ENV === 'production' ? '/ohmysite-html-template/' : '/',
   root: 'src',
   build: {
     outDir: '../dist',

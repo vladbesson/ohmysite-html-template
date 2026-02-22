@@ -6,7 +6,7 @@
   <title>Portfolio Item</title>
   <link rel="stylesheet" href="/styles/main.css" />
 </head>
-<body class="bg-white text-gray-900">
+<body class="bg-white text-gray-900 min-h-screen flex flex-col">
   <!-- Header -->
   <header class="py-5">
     <div class="w-[95%] max-w-[1600px] mx-auto">
@@ -55,16 +55,20 @@
     </div>
   </header>
 
-  <main>
+  <main class="flex-1">
     <div class="py-10 md:py-16">
       <div class="w-[95%] max-w-[1600px] mx-auto">
         <header class="mb-8">
-          <h1 class="text-3xl md:text-4xl font-bold text-gray-900">Portfolio item title</h1>
+          <h1 class="text-3xl md:text-4xl font-bold text-teal-600">Portfolio item title</h1>
         </header>
 
-        <div class="grid md:grid-cols-2 gap-8 md:gap-12">
-          <div>
-            <h2 class="text-2xl font-bold text-gray-900 mb-4">Lorem ipsum</h2>
+        <div class="flex flex-col md:flex-row gap-8 md:gap-12">
+          <div class="order-2 md:order-1 md:w-[70%]">
+            <img src="./img/work1.png" alt="Portfolio item" class="w-full h-auto md:-ml-8 lg:-ml-[30px]" />
+          </div>
+
+          <div class="order-1 md:order-2 md:w-[30%]">
+            <h2 class="text-2xl font-bold text-teal-600 mb-4">Lorem ipsum</h2>
             <div class="text-lg leading-relaxed">
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias
@@ -73,10 +77,6 @@
                 quia sapiente temporibus.
               </p>
             </div>
-          </div>
-
-          <div>
-            <img src="img/work1.png" alt="Portfolio item" class="w-full h-auto" />
           </div>
         </div>
       </div>

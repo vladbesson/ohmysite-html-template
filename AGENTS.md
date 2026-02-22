@@ -108,7 +108,7 @@ Header и footer **копируются** в каждую страницу. Си
 | Роль | Классы |
 |---|---|
 | Текст основной | `text-gray-900`, `text-black` |
-| Заголовки секций | `text-rose-600` |
+| Заголовки секций | `text-teal-600` |
 | Ссылки | `text-blue-600` |
 | Ссылки hover | `hover:text-gray-900` или `hover:text-blue-600` |
 | Фон страницы | `bg-white` |
