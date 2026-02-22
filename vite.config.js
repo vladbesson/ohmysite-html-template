@@ -4,6 +4,7 @@ import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
   plugins: [tailwindcss()],
+  base: '/ohmysite-html-template/',
   root: 'src',
   build: {
     outDir: '../dist',
